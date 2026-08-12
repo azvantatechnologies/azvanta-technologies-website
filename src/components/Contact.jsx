@@ -22,6 +22,19 @@ const defaultStatus = {
   message: "",
 };
 
+// tempory added code
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  console.log("EmailJS config:", {
+    serviceId: import.meta.env.EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.EMAILJS_PUBLIC_KEY,
+  });
+
+  // your existing EmailJS code...
+};
+
 // Provides an EmailJS-powered contact form with custom validation.
 function Contact() {
   const formRef = useRef(null);
